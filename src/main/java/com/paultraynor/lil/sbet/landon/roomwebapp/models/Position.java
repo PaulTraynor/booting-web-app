@@ -1,17 +1,17 @@
 package com.paultraynor.lil.sbet.landon.roomwebapp.models;
 
 public enum Position {
-    SECURITY, MANAGER, FRONT_DESK, CHEF;
+    SECURITY, HOUSEKEEPING, FRONT_DESK, CONCIERGE;
 
     public String toString() {
         switch (this) {
             case SECURITY:
                 return "Security";
-            case MANAGER:
+            case HOUSEKEEPING:
                 return "Manager";
             case FRONT_DESK:
                 return "Front Desk";
-            case CHEF:
+            case CONCIERGE:
                 return "Chef";
             default:
                 return "";
