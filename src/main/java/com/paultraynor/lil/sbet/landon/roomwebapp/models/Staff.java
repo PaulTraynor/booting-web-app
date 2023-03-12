@@ -1,11 +1,11 @@
 package com.paultraynor.lil.sbet.landon.roomwebapp.models;
 
+import java.util.UUID;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -15,7 +15,6 @@ public class Staff {
 
     @Id
     @Column(name = "EMPLOYEE_ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String employeeId;
     @Column(name = "FIRST_NAME")
     private String firstName;
@@ -26,7 +25,7 @@ public class Staff {
     private Position position;
 
     public Staff() {
-
+        this.employeeId = UUID.randomUUID().toString();
     }
 
     public Staff(String employeeId, String fistName, String lastName, Position position) {
